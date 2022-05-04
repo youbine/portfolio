@@ -1,0 +1,294 @@
+.about {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  transition: 0.8s;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+.scroll {
+  position: absolute;
+  font-size: 1rem;
+  left: 0;
+  bottom: 0rem;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+.aboutWrap {
+  margin: 0 auto;
+  padding-top: 8rem;
+  width: 90%;
+  height: 100%;
+  position: relative;
+}
+.left {
+  width: 100%;
+  text-align: left;
+}
+.greeting {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 18.5rem;
+  font-size: 2rem;
+  width: 16rem;
+  font-family: "Permanent Marker", cursive;
+}
+.greeting span {
+  mix-blend-mode: difference;
+  position: absolute;
+  display: inline;
+  letter-spacing: 0.3rem;
+}
+.develop {
+  position: relative;
+}
+.text {
+  mix-blend-mode: difference;
+  position: absolute;
+  top: 0;
+  font-size: 4.5rem;
+}
+.text p {
+  opacity: 0;
+}
+.name {
+  mix-blend-mode: difference;
+  left: 9rem;
+  font-size: 4.5rem;
+  animation: fadeIn 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  z-index: 5;
+}
+.name__text {
+  display: inline-block;
+  position: relative;
+  font-size: 4.5rem;
+  letter-spacing: 0.3rem;
+}
+.name__text svg {
+  fill: none;
+  stroke: red;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 338;
+  stroke-dashoffset: 338;
+  stroke-linecap: round;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(95% + 50px);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: stroke-dashoffset 0s 0.2s, opacity 0.2s;
+  z-index: 2;
+}
+.about:hover .name__text svg {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  transition: opacity 0s,
+    stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.right {
+  mix-blend-mode: difference;
+  position: relative;
+  bottom: -15rem;
+  width: 100%;
+  margin-right: 6rem;
+  height: 50%;
+  text-align: right;
+  font-size: 2rem;
+  color: #f2f2f2;
+}
+.doing__wrap {
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  animation: fadeIntoTop 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 2s;
+}
+
+.love__wrap,
+.iam__wrap {
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+}
+.love__wrap span,
+.iam__wrap span {
+  display: inline-block;
+}
+.typing__love,
+.typing__iam {
+  color: rgb(255, 255, 0);
+}
+.love__wrap .cursor,
+.iam__wrap .cursor {
+  display: inline-block;
+  background-color: #f2f2f2;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.love__wrap .cursor.typing,
+.iam__wrap .cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #f2f2f2;
+  }
+  49% {
+    background-color: #f2f2f2;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #f2f2f2;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIntoTop {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .text {
+    font-size: 2.8rem;
+  }
+  .name {
+    font-size: 2.8rem;
+  }
+  .name__text {
+    font-size: 2.8rem;
+  }
+  .greeting {
+    top: 14.5rem;
+    width: 10rem;
+    font-size: 1rem;
+  }
+  .right {
+    font-size: 1.5rem;
+    bottom: -8rem;
+  }
+  .doing__wrap {
+    font-size: 1.5rem;
+  }
+  .scroll {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1300px) {
+  .text {
+    font-size: 3.5rem;
+  }
+  .name {
+    font-size: 3.5rem;
+  }
+  .name__text {
+    font-size: 3.5rem;
+  }
+  .greeting {
+    top: 16rem;
+    width: 13rem;
+    font-size: 1.5rem;
+  }
+  .right {
+    font-size: 2rem;
+    bottom: -9rem;
+  }
+  .doing__wrap {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
+  .text {
+    font-size: 4rem;
+  }
+  .name {
+    font-size: 4rem;
+  }
+  .name__text {
+    font-size: 4rem;
+  }
+  .greeting {
+    top: 17rem;
+    width: 15rem;
+    font-size: 2rem;
+  }
+  .right {
+    font-size: 2rem;
+    bottom: -13rem;
+  }
+  .doing__wrap {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1700px) and (max-width: 1900px) {
+  .text {
+    font-size: 5rem;
+  }
+  .name {
+    font-size: 5rem;
+  }
+  .name__text {
+    font-size: 5rem;
+  }
+  .greeting {
+    top: 19rem;
+    width: 20rem;
+    font-size: 2.5rem;
+  }
+  .right {
+    font-size: 2.5rem;
+    bottom: -15rem;
+  }
+  .doing__wrap {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .text {
+    font-size: 6rem;
+  }
+  .name {
+    font-size: 6rem;
+  }
+  .name__text {
+    font-size: 6rem;
+  }
+  .greeting {
+    top: 22rem;
+    width: 22rem;
+    font-size: 2.5rem;
+  }
+  .right {
+    font-size: 3rem;
+    bottom: -18rem;
+  }
+  .doing__wrap {
+    font-size: 3rem;
+  }
+}

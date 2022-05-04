@@ -1,0 +1,47 @@
+@import "css/reset.css";
+@import "css/header.css";
+@import "css/about.css";
+@import "css/work.css";
+@import "css/contact.css";
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&family=Noto+Sans+KR:wght@300&family=Open+Sans&family=Permanent+Marker&display=swap");
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #f2f2f2;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-family: "Gentium Book Basic", serif;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+.mobile {
+  display: none;
+}
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  html {
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+  .aboutWrap {
+    display: none;
+  }
+  .work {
+    display: none;
+  }
+  .contact {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  .scroll {
+    display: none;
+  }
+  .mobile {
+    margin-top: 10rem;
+    font-size: 2rem;
+    display: block;
+  }
+}
