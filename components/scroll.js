@@ -38,6 +38,7 @@ window.addEventListener("scroll", () => {
       nav[i].style.opacity = 0.5;
     }
     nav[2].style.opacity = 1;
+    cards.classList.add("card__visible");
   }
 
   current === 0
