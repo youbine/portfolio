@@ -105,7 +105,7 @@ titles.forEach((title) =>
       viewport.style.backgroundImage = "url('React-netflix.png')";
       link.href = "https://youbine.github.io/react_netflix/";
     } else if (span[0].innerHTML === "Almighty Taco") {
-      viewport.style.backgroundImage = "url('Almighty-Taco.png')";
+      viewport.style.backgroundImage = "url('Almighty-taco.png')";
       link.href = "https://youbine.github.io/almightyTaco/";
     }
 
