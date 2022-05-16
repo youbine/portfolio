@@ -10,6 +10,7 @@ const padPath = pad.querySelectorAll("path");
 const mobilePath = mobile.querySelectorAll("path");
 const iphone = document.querySelector(".iphone");
 const ipad = document.querySelector(".ipad");
+const link = document.querySelector(".link");
 
 deviceSpans.forEach((span) => {
   span.addEventListener("click", () => {
@@ -77,6 +78,8 @@ deviceSpans.forEach((span) => {
 titles.forEach((title) =>
   title.addEventListener("click", () => {
     const span = title.querySelectorAll("span");
+    const skills = title.querySelector(".skills");
+
     if (span[1].innerHTML.includes("mobile", "pad")) {
       pad.style.display = "none";
       mobile.style.display = "none";
@@ -91,24 +94,19 @@ titles.forEach((title) =>
     if (span[0].innerHTML === "hite") {
       viewport.style.backgroundImage =
         "url('Webpage-CloneCoding-Hitejinro.png')";
-      viewport.addEventListener("click", () => {
-        window.open(
-          "https://youbine.github.io/Webpage_CloneCoding/Hitejinro/index.html"
-        );
-      });
+      link.href =
+        "https://youbine.github.io/Webpage_CloneCoding/Hitejinro/index.html";
     } else if (span[0].innerHTML === "starbucks") {
       viewport.style.backgroundImage =
         "url('Webpage-CloneCoding-Starbucks.png')";
-      viewport.addEventListener("click", () => {
-        window.open(
-          "https://youbine.github.io/Webpage_CloneCoding/Starbucks/index.html"
-        );
-      });
+      link.href =
+        "https://youbine.github.io/Webpage_CloneCoding/Starbucks/index.html";
     } else if (span[0].innerHTML === "netflix") {
       viewport.style.backgroundImage = "url('React-netflix.png')";
-      viewport.addEventListener("click", () => {
-        window.open("https://youbine.github.io/react_netflix/");
-      });
+      link.href = "https://youbine.github.io/react_netflix/";
+    } else if (span[0].innerHTML === "Almighty Taco") {
+      viewport.style.backgroundImage = "url('Almighty-Taco.png')";
+      link.href = "https://youbine.github.io/almightyTaco/";
     }
 
     for (i = 0; i < titles.length; i++) {
@@ -117,7 +115,7 @@ titles.forEach((title) =>
     }
     devices.classList.toggle("showDevicesSpan");
     title.classList.toggle("clicked") && title.classList.remove("flip");
-
+    skills.classList.toggle("skillsToggle");
     //show mobile
     if (
       monitor.classList.contains("showDevices") ||
