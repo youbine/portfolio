@@ -95,6 +95,7 @@
 }
 
 .right {
+  top: 5%;
   padding-top: 2rem;
   mix-blend-mode: difference;
   display: flex;
