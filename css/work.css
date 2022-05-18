@@ -100,13 +100,13 @@
 }
 
 .work__detail {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
+  max-width: 55vw;
+  max-height: 55vw;
   position: relative;
-  top: -7rem;
+  top: -5%;
+  right: -2%;
   background-repeat: no-repeat;
   background-image: radial-gradient(
     circle farthest-side at center center,
@@ -123,7 +123,7 @@
 }
 
 .showbg {
-  background-size: 150% 150%;
+  background-size: 170% 170%;
 }
 .devices {
   opacity: 0;
@@ -138,6 +138,16 @@
 }
 .showDevicesSpan {
   opacity: 1;
+}
+.devices__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3vw;
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 100%;
 }
 .devices span {
   color: rgb(134, 134, 134);
@@ -306,13 +316,13 @@
     opacity: 1;
   }
 }
-@media screen and (min-width: 1000px) and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .small {
     font-size: 0.7rem;
     margin: -0.3rem 0 0 0.2rem;
   }
   .titles {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   .devices span {
     font-size: 1.2rem;
@@ -330,13 +340,13 @@
     margin: -0.3rem 0 0 0.2rem;
   }
   .titles {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   .devices span {
     font-size: 1.5rem;
   }
   .skills {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 }
 @media screen and (min-width: 1700px) {
