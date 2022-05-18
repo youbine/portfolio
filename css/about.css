@@ -1,6 +1,7 @@
 .about {
   width: 100%;
-  height: 100vmin;
+  height: 100vh;
+  min-height: 100vh;
   background-color: black;
   transition: 0.8s;
   overflow: hidden;
@@ -15,27 +16,25 @@
   transform: rotate(180deg);
 }
 .aboutWrap {
-  padding-top: 8rem;
-  max-height: 45rem;
   display: flex;
-  margin: auto;
+  margin: 15vh auto auto auto;
   width: 90%;
   overflow: hidden;
-  height: 100vmin;
+  height: 80vmin;
+  position: relative;
 }
 .left {
   left: 0;
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
   margin: auto;
 }
-
 .greeting {
   position: relative;
-  font-size: 2rem;
+  font-size: 2vmax;
   font-family: "Permanent Marker", cursive;
 }
 .greeting span {
@@ -52,22 +51,23 @@
   mix-blend-mode: difference;
   position: absolute;
   top: 0;
-  font-size: 4.5rem;
+  font-size: 4.5vmax;
 }
 .text p {
   opacity: 0;
 }
 .name {
   mix-blend-mode: difference;
-  left: 9rem;
-  font-size: 4.5rem;
+  left: 9vw;
+  font-size: 4.5vmax;
   animation: fadeIn 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   z-index: 5;
 }
 .name__text {
+  padding-top: 2rem;
   display: inline-block;
   position: relative;
-  font-size: 4.5rem;
+  font-size: 4.5vmax;
   letter-spacing: 0.3rem;
 }
 .name__text svg {
@@ -79,7 +79,7 @@
   stroke-dashoffset: 338;
   stroke-linecap: round;
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   width: calc(95% + 50px);
   opacity: 0;
@@ -93,23 +93,21 @@
   transition: opacity 0s,
     stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-
 .right {
-  top: 5%;
-  padding-top: 2rem;
   mix-blend-mode: difference;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  position: relative;
+  justify-content: flex-end;
+  position: absolute;
+  top: -8vh;
   width: 100%;
-  margin: auto;
+  height: 100%;
   text-align: right;
-  font-size: 2rem;
+  font-size: 2vmax;
   color: #f2f2f2;
 }
 .doing__wrap {
-  font-size: 2rem;
+  font-size: 2vmax;
   animation: fadeIntoTop 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation-delay: 2s;
 }
@@ -174,116 +172,8 @@
   }
 }
 
-@media screen and (min-width: 900px) and (max-width: 1000px) {
-  .text {
-    font-size: 3rem;
-  }
-  .name {
-    font-size: 3rem;
-  }
-  .name__text {
-    font-size: 3rem;
-  }
-  .greeting {
-    font-size: 1.2rem;
-  }
-  .right {
-    width: 60%;
-    top: 5%;
-    font-size: 1.3rem;
-  }
-  .doing__wrap {
-    font-size: 1.3rem;
-  }
+@media screen and (min-width: 900px) and (max-width: 1040px) {
   .scroll {
     font-size: 0.7rem;
-  }
-}
-@media screen and (min-width: 1000px) and (max-width: 1300px) {
-  .text {
-    font-size: 3.5rem;
-  }
-  .name {
-    font-size: 3.5rem;
-  }
-  .name__text {
-    font-size: 3.5rem;
-  }
-  .greeting {
-    font-size: 1.5rem;
-  }
-  .right {
-    width: 60%;
-
-    font-size: 1.5rem;
-  }
-  .doing__wrap {
-    font-size: 1.5rem;
-  }
-}
-@media screen and (min-width: 1300px) and (max-width: 1400px) {
-  .text {
-    font-size: 4rem;
-  }
-  .name {
-    font-size: 4rem;
-  }
-  .name__text {
-    font-size: 4rem;
-  }
-  .greeting {
-    font-size: 2rem;
-  }
-  .right {
-    top: 5%;
-    font-size: 2rem;
-  }
-  .doing__wrap {
-    font-size: 2rem;
-  }
-}
-@media screen and (min-width: 1700px) and (max-width: 1900px) {
-  .text {
-    font-size: 5rem;
-  }
-  .name {
-    font-size: 5rem;
-  }
-  .name__text {
-    font-size: 5rem;
-  }
-  .greeting {
-    font-size: 2.5rem;
-  }
-  .right {
-    top: 10%;
-    font-size: 2.5rem;
-  }
-  .doing__wrap {
-    font-size: 2.5rem;
-  }
-}
-@media screen and (min-width: 1900px) {
-  .text {
-    font-size: 6rem;
-  }
-  .name {
-    font-size: 6rem;
-  }
-  .name__text {
-    font-size: 6rem;
-  }
-  .greeting {
-    font-size: 2.5rem;
-  }
-  .right {
-    top: 20%;
-    font-size: 3rem;
-  }
-  .doing__wrap {
-    font-size: 3rem;
-  }
-  .aboutWrap {
-    padding-top: 10rem;
   }
 }
