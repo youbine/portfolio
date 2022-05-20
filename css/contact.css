@@ -10,12 +10,9 @@
   font-size: 3rem;
   color: red;
   writing-mode: vertical-lr;
-  transform: rotate(180deg) translateY(100%);
+  transform: rotate(180deg);
   transition: 0.5s;
-  z-index: -1;
-}
-.showTag {
-  transform: rotate(180deg) translateY(0%);
+  z-index: 1;
 }
 .contact__wrap {
   position: relative;

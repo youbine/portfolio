@@ -2,7 +2,6 @@ const header = document.querySelector("header");
 const windowHeight = window.innerHeight;
 const about = document.querySelector(".about");
 const workTag = document.querySelector(".work__tag");
-const contactTag = document.querySelector(".contact__tag");
 const nav = document.querySelectorAll(".menu > ul > li");
 const work = document.querySelector(".work");
 const contact = document.querySelector(".contact");
@@ -44,12 +43,12 @@ window.addEventListener("scroll", () => {
   current === 0
     ? ((about.style.backgroundColor = "black"),
       workTag.classList.remove("showTag"))
-    : (about.style.backgroundColor = "#F2F2F2");
+    : ((about.style.backgroundColor = "#F2F2F2"),
+      workTag.classList.add("showTag"));
 
   if (current > prevScroll) {
     header.classList.add("scroll__down");
     header.style.transition = "0.8s ease-in-out";
-    workTag.classList.add("showTag");
   } else if (current < prevScroll) {
     header.classList.remove("scroll__down");
   }

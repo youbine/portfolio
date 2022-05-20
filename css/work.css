@@ -3,6 +3,7 @@
   height: 130vh;
   text-transform: uppercase;
 }
+
 .work__tag {
   text-transform: capitalize;
   position: sticky;
@@ -14,6 +15,10 @@
   transition: 0.5s;
   z-index: -1;
 }
+.work__tag.showTag {
+  transform: rotate(180deg) translateY(0%);
+}
+
 .workWrap {
   margin: 0 auto;
   width: 90%;
