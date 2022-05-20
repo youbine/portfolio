@@ -1,4 +1,4 @@
-const header = document.querySelector("header");
+const header = document.querySelector("nav");
 const windowHeight = window.innerHeight;
 const about = document.querySelector(".about");
 const workTag = document.querySelector(".work__tag");

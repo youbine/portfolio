@@ -24,7 +24,7 @@ nav {
   z-index: 99;
   position: absolute;
   background-color: rgba(34, 34, 34, 0.185);
-  height: 2rem;
+  height: 2.5rem;
   width: 100%;
   transform: rotate(-15deg);
 }
