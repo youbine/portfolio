@@ -107,6 +107,10 @@ titles.forEach((title) =>
     } else if (span[0].innerHTML === "Almighty Taco") {
       viewport.style.backgroundImage = "url('Almighty-taco.png')";
       link.href = "https://youbine.github.io/almightyTaco/";
+    } else if (span[0].innerHTML === "Scroll animation") {
+      viewport.style.backgroundImage = "url('Webpage-CloneCoding-Apple.png')";
+      link.href =
+        "https://youbine.github.io/Webpage_CloneCoding/Apple/index.html";
     }
 
     for (i = 0; i < titles.length; i++) {
