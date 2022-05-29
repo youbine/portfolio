@@ -23,6 +23,7 @@
   width: 90%;
   height: 130vh;
   display: flex;
+  align-items: center;
 }
 
 .titles {
@@ -110,7 +111,6 @@
   max-width: 55vw;
   max-height: 55vw;
   position: relative;
-  top: 5%;
   right: -2%;
   background-repeat: no-repeat;
   background-image: radial-gradient(
@@ -323,5 +323,20 @@
   100% {
     stroke-dasharray: 1500 1500;
     opacity: 1;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .work {
+    max-height: 60rem;
+  }
+  .work svg {
+    max-height: 60rem;
+  }
+  .workWrap {
+    max-height: 60rem;
+  }
+  .work__detail {
+    height: 100%;
+    width: 100%;
   }
 }
