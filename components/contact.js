@@ -1,22 +1,42 @@
-const rotateCard = document.querySelector(".card__inner");
-const cards = document.querySelector(".card");
-const animationCard = document.querySelector(".card__wrap");
-
-rotateCard.addEventListener("click", () => {
-  rotateCard.classList.toggle("rotated");
+gsap.registerPlugin(ScrollTrigger);
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".contact",
+    start: "-10%",
+  },
 });
-
-cards.addEventListener("mousemove", (event) => {
-  let xAxis = (cards.offsetWidth / 2 - event.offsetX) / 20;
-  let yAxis = (cards.offsetHeight / 2 - event.offsetY) / 20;
-
-  animationCard.style.transform = `rotateY(${
-    xAxis * -1
-  }deg) rotateX(${yAxis}deg)`;
-  animationCard.style.transition = "0.2s";
-});
-
-cards.addEventListener("mouseleave", () => {
-  animationCard.style.transform = "rotateY(0deg) rotateX(0deg)";
-  animationCard.style.transition = "1s ease";
-});
+tl.from(".contact__skills > p", {
+  y: 50,
+  opacity: 0,
+  duration: 1,
+  ease: "power4",
+})
+  .from(".skills__list > li", {
+    x: -50,
+    opacity: 0,
+    duration: 1,
+    ease: "power4",
+    stagger: 0.5,
+  })
+  .from(".skills__list > li", {
+    backgroundSize: "100% 0%",
+    ease: Circ.easeInOut,
+    duration: 1,
+  })
+  .from(".contact__email > h2", {
+    x: 100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power4",
+  })
+  .from(".contact__email > h2 > strong", {
+    backgroundSize: "100% 0%",
+    ease: Circ.easeInOut,
+    duration: 1,
+  })
+  .from(".email, .gmail", {
+    x: 100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power4",
+  });

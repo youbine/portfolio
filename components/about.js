@@ -1,51 +1,141 @@
 const greeting = document.querySelectorAll(".greeting > span");
 const texts = document.querySelectorAll(".text > p");
 
+const animationOptions = {
+  ease: "expo.inOut",
+};
+
+const introAnimation = () => {
+  const tl = gsap.timeline({
+    defaults: {
+      ease: animationOptions.ease,
+      duration: 1,
+    },
+  });
+
+  tl.to(".intro__title", {
+    duration: 1.5,
+    y: 0,
+    autoAlpha: 1,
+    delay: 0.5,
+  })
+    .to(".intro__background__left, .intro__background__right", {
+      scaleX: 1,
+    })
+    .to(".intro__background__left, .intro__background__right", {
+      scaleY: 0,
+      transformOrigin: "top center",
+    })
+    .to(
+      ".intro__title",
+      {
+        duration: 1.5,
+        y: -60,
+        autoAlpha: 0,
+      },
+      "-=0.6"
+    )
+    .to(
+      ".intro",
+      {
+        y: "-100%",
+      },
+      "-=0.5"
+    )
+    .from(".about > svg", {
+      opacity: 0,
+      duration: 1,
+    });
+
+  return tl;
+};
+
+const skewInElements = (elements) => {
+  const tl = gsap.timeline();
+
+  tl.from(elements, {
+    duration: 1,
+    ease: animationOptions.ease,
+    skewY: -5,
+    autoAlpha: 0,
+    y: 40,
+  });
+
+  return tl;
+};
+
+const fadeInElements = (elements) => {
+  const tl = gsap.timeline();
+
+  tl.from(elements, {
+    duration: 1,
+    ease: animationOptions.ease,
+    y: "20px",
+  });
+
+  return tl;
+};
+
+const master = gsap.timeline({
+  paused: false,
+  delay: 0.2,
+});
+
+const tlgreeting = new TimelineLite({
+  onComplete: function () {
+    tlgreeting.restart();
+  },
+});
+tlgreeting.delay(6);
+TweenLite.defaultEase = Circ.easeInOut;
+const time = 1;
+const y = 50;
+tlgreeting
+  .add(
+    TweenMax.staggerFromTo(
+      greeting,
+      time,
+      {
+        opacity: 0,
+        y: y,
+      },
+      {
+        opacity: 1,
+        y: 0,
+      },
+      2
+    )
+  )
+  .add(
+    TweenMax.staggerTo(
+      greeting,
+      time,
+      {
+        delay: time,
+        autoAlpha: 0,
+        y: -y,
+      },
+      2
+    ),
+    1.3
+  );
+
+master
+  .add(introAnimation())
+  .add(fadeInElements(".greeting"))
+  .add(
+    skewInElements(".today, .love__wrap, .iam__wrap, .home, .menu"),
+    "+=0.5"
+  );
+
 texts.forEach((text, i) => {
   setTimeout(function () {
     ((text.style.opacity = 1),
     (text.style.animation =
       "fadeIn 1s cubic-bezier(0.39, 0.575, 0.565, 1) both")),
       (text.style.animationDelay = `${0.2 * i}s`);
-  }, 1000);
+  }, 6500);
 });
-
-const tl = new TimelineLite({
-  onComplete: function () {
-    tl.restart();
-  },
-});
-
-TweenLite.defaultEase = Circ.easeInOut;
-const time = 0.9;
-const y = 50;
-tl.add(
-  TweenMax.staggerFromTo(
-    greeting,
-    time,
-    {
-      opacity: 0,
-      y: y,
-    },
-    {
-      opacity: 1,
-      y: 0,
-    },
-    2
-  )
-).add(
-  TweenMax.staggerTo(
-    greeting,
-    time,
-    {
-      delay: time,
-      opacity: 0,
-      y: -y,
-    },
-    2
-  ),
-  1.3
-);
 
 const clock = document.querySelector(".clock");
 const weeks = document.querySelector(".weeks");
@@ -167,6 +257,6 @@ function typingBackIam() {
 }
 
 window.addEventListener("load", function () {
-  if (thingsILove.length) setTimeout(typingLove, 2250);
-  if (thingsIam.length) setTimeout(typingIam, 2250);
+  if (thingsILove.length) setTimeout(typingLove, 8000);
+  if (thingsIam.length) setTimeout(typingIam, 8000);
 });

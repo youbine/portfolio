@@ -163,3 +163,17 @@ workWrap.addEventListener("mouseenter", () => {
 workWrap.addEventListener("mouseleave", () => {
   mouse.style.opacity = 0;
 });
+
+gsap.registerPlugin(ScrollTrigger);
+const tlWrok = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".work",
+    start: "-10%",
+  },
+});
+tlWrok.from(".titles", {
+  y: 50,
+  opacity: 0,
+  duration: 1.5,
+  ease: "power4",
+});

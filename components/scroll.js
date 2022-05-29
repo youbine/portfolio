@@ -1,7 +1,6 @@
 const header = document.querySelector("nav");
 const windowHeight = window.innerHeight;
 const about = document.querySelector(".about");
-const workTag = document.querySelector(".work__tag");
 const nav = document.querySelectorAll(".menu > ul > li");
 const work = document.querySelector(".work");
 const contact = document.querySelector(".contact");
@@ -37,14 +36,11 @@ window.addEventListener("scroll", () => {
       nav[i].style.opacity = 0.5;
     }
     nav[2].style.opacity = 1;
-    cards.classList.add("card__visible");
   }
 
   current === 0
-    ? ((about.style.backgroundColor = "black"),
-      workTag.classList.remove("showTag"))
-    : ((about.style.backgroundColor = "#F2F2F2"),
-      workTag.classList.add("showTag"));
+    ? (about.style.backgroundColor = "black")
+    : (about.style.backgroundColor = "#F2F2F2");
 
   if (current > prevScroll) {
     header.classList.add("scroll__down");
@@ -53,4 +49,35 @@ window.addEventListener("scroll", () => {
     header.classList.remove("scroll__down");
   }
   prevScroll = current;
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".about > svg > text", {
+  scrollTrigger: {
+    trigger: ".about",
+    start: "top",
+    end: "bottom",
+    scrub: "true",
+  },
+  x: "-40%",
+});
+
+gsap.to(".work > svg > text", {
+  scrollTrigger: {
+    trigger: ".work",
+    start: "-40%",
+    end: "bottom",
+    scrub: "true",
+  },
+  x: "70%",
+});
+gsap.to(".contact > svg > text", {
+  scrollTrigger: {
+    trigger: ".contact",
+    start: "-40%",
+    end: "bottom",
+    scrub: "true",
+  },
+  x: "-19%",
 });

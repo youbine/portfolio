@@ -7,13 +7,60 @@
   overflow: hidden;
   text-transform: uppercase;
 }
-.scroll {
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.intro {
+  position: fixed;
+  background-color: #f2f2f2;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 5;
+}
+.intro__title {
+  letter-spacing: 10px;
+  color: rgb(255, 57, 57);
+  font-size: 7vmax;
+  width: 80%;
+  text-align: center;
+  z-index: 2;
+  transform: translateY(60px);
+}
+
+.intro__background {
   position: absolute;
-  font-size: 1rem;
+  top: 0;
+  background-color: black;
+  width: 50%;
+  height: 100%;
+  transform: scaleX(0);
+}
+.intro__background__left {
   left: 0;
-  bottom: 0rem;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
+  transform-origin: left center;
+}
+
+.intro__background__right {
+  left: 50%;
+  transform-origin: right center;
+}
+
+.about svg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+.about svg text {
+  font-family: "Bebas Neue", cursive;
+  fill: none;
+  stroke: rgba(255, 0, 0, 0.116);
+  font-size: 35vmax;
+  letter-spacing: -3px;
+  stroke-width: 14;
+  transform: matrix(1, 0, 0, 1, 25, 0);
 }
 .aboutWrap {
   display: flex;
@@ -35,16 +82,16 @@
 .greeting {
   position: relative;
   font-size: 2vmax;
-  font-family: "Permanent Marker", cursive;
 }
 .greeting span {
   padding: 3% 3%;
   mix-blend-mode: difference;
   position: absolute;
   display: block;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
 }
 .develop {
+  mix-blend-mode: difference;
   position: relative;
 }
 .text {
@@ -61,6 +108,7 @@
   left: 9vw;
   font-size: 4.5vmax;
   animation: fadeIn 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 6s;
   z-index: 5;
 }
 .name__text {
@@ -108,8 +156,6 @@
 }
 .doing__wrap {
   font-size: 2vmax;
-  animation: fadeIntoTop 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation-delay: 2s;
 }
 
 .love__wrap span,
@@ -118,7 +164,7 @@
 }
 .typing__love,
 .typing__iam {
-  color: rgb(255, 255, 0);
+  color: rgb(73, 73, 73);
 }
 .love__wrap .cursor,
 .iam__wrap .cursor {
@@ -158,22 +204,5 @@
   100% {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-@keyframes fadeIntoTop {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@media screen and (min-width: 900px) and (max-width: 1040px) {
-  .scroll {
-    font-size: 0.7rem;
   }
 }

@@ -1,41 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 .work {
   width: 100%;
   height: 130vh;
   text-transform: uppercase;
 }
-
-.work__tag {
-  text-transform: capitalize;
-  position: sticky;
-  top: 0;
-  font-size: 3rem;
-  color: red;
-  writing-mode: vertical-lr;
-  transform: rotate(180deg) translateY(100%);
-  transition: 0.5s;
-  z-index: -1;
+.work svg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
 }
-.work__tag.showTag {
-  transform: rotate(180deg) translateY(0%);
+.work svg text {
+  font-family: "Bebas Neue", cursive;
+  fill: none;
+  stroke: rgba(255, 0, 0, 0.116);
+  font-size: 35vmax;
+  letter-spacing: -5px;
+  stroke-width: 14;
 }
-
 .workWrap {
   margin: 0 auto;
   width: 90%;
   height: 130vh;
   display: flex;
 }
+
 .titles {
   width: max-content;
-  height: 100vh;
+  height: 100%;
   position: relative;
   mix-blend-mode: difference;
-  padding-top: 4%;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
-  font-size: 4rem;
+  font-size: 3.5vmax;
   perspective: 10000px;
 }
 .titlewrap {
@@ -52,7 +51,8 @@
   position: absolute;
   bottom: -100%;
   opacity: 0;
-  font-size: 1.5rem;
+  line-height: 1.2;
+  font-size: 1.2vmax;
 }
 .skills p {
   color: rgb(0, 255, 255);
@@ -84,8 +84,8 @@
 }
 .small {
   opacity: 0.3;
-  margin: -0.5rem 0 0 0.2rem;
-  font-size: 1rem;
+  line-height: 1.3;
+  font-size: 1vmax;
 }
 .mouse {
   display: flex;
@@ -105,18 +105,18 @@
 }
 
 .work__detail {
-  height: 90%;
+  height: 100%;
   width: 90%;
   max-width: 55vw;
   max-height: 55vw;
   position: relative;
-  top: -5%;
+  top: 5%;
   right: -2%;
   background-repeat: no-repeat;
   background-image: radial-gradient(
     circle farthest-side at center center,
     #fff 0%,
-    #fff 60%,
+    rgba(255, 255, 255, 0.5) 60%,
     transparent 50%
   );
   background-position: center center;
@@ -138,7 +138,7 @@
   transform: translateX(-50%);
   transition: 0.5s;
   transition-delay: 1s;
-  font-size: 2rem;
+  font-size: 2vmax;
   z-index: 4;
 }
 .showDevicesSpan {
@@ -155,6 +155,7 @@
   height: 100%;
 }
 .devices span {
+  font-size: 1.3vmax;
   color: rgb(134, 134, 134);
   position: relative;
   cursor: pointer;
@@ -288,11 +289,12 @@
   opacity: 0;
   stroke-width: 13;
   fill: none;
-  stroke-dasharray: 1500;
+  stroke-dasharray: 0;
 }
 .pathLast {
   animation: line-dash 10s;
   animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
 #pad svg path:first-child,
@@ -301,11 +303,12 @@
   stroke-width: 13;
   fill: none;
   opacity: 0;
-  stroke-dasharray: 1500;
+  stroke-dasharray: 0;
 }
 .pathFirst {
   animation: line-dash 10s;
   animation-delay: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes line-dash {
@@ -318,50 +321,7 @@
     opacity: 1;
   }
   100% {
+    stroke-dasharray: 1500 1500;
     opacity: 1;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .small {
-    font-size: 0.7rem;
-    margin: -0.3rem 0 0 0.2rem;
-  }
-  .titles {
-    font-size: 3rem;
-  }
-  .devices span {
-    font-size: 1.2rem;
-  }
-  .work__tag {
-    font-size: 2.5rem;
-  }
-  .skills {
-    font-size: 0.9rem;
-  }
-}
-@media screen and (min-width: 1200px) and (max-width: 1300px) {
-  .small {
-    font-size: 0.7rem;
-    margin: -0.3rem 0 0 0.2rem;
-  }
-  .titles {
-    font-size: 3.5rem;
-  }
-  .devices span {
-    font-size: 1.5rem;
-  }
-  .skills {
-    font-size: 1.3rem;
-  }
-}
-@media screen and (min-width: 1700px) {
-  .work__tag {
-    font-size: 4rem;
-  }
-  .small {
-    font-size: 1.3rem;
-  }
-  .titles {
-    font-size: 5rem;
   }
 }

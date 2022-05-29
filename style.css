@@ -3,7 +3,7 @@
 @import "css/about.css";
 @import "css/work.css";
 @import "css/contact.css";
-@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&family=Noto+Sans+KR:wght@300&family=Open+Sans&family=Permanent+Marker&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@500&family=Megrim&display=swap');
 
 html {
   height: 100%;
@@ -11,7 +11,7 @@ html {
   background-color: #f2f2f2;
   scroll-behavior: smooth;
   font-size: 16px;
-  font-family: "Gentium Book Basic", serif;
+  font-family: "Kaisei Tokumin", serif;
 }
 html::-webkit-scrollbar {
   display: none;

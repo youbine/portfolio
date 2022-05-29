@@ -1,8 +1,9 @@
 nav {
+  font-family: "Megrim", cursive;
   width: 100%;
-  font-size: 2rem;
   position: fixed;
   z-index: 300;
+  height: 4rem;
 }
 .nav__wrap {
   width: 90%;
@@ -10,7 +11,7 @@ nav {
   height: 2rem;
   display: flex;
   justify-content: space-between;
-  padding-top: 4vmin;
+  padding-top: 2rem;
 }
 .home {
   text-align: center;
@@ -38,12 +39,13 @@ nav {
   font-size: 1.3vmax;
 }
 .menu li {
+  font-weight: bold;
   cursor: pointer;
   color: red;
   float: left;
   margin-right: 1rem;
   opacity: 0.5;
-  font-size: 2.5vmax;
+  font-size: 1.8vmax;
 }
 .menu li:first-child {
   opacity: 1;
