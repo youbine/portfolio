@@ -26,18 +26,18 @@ window.addEventListener("scroll", () => {
       nav[i].style.opacity = 0.5;
     }
     nav[0].style.opacity = 1;
-  } else if (current < contact.offsetTop) {
+  } else if (current <= contact.offsetTop - 100) {
     for (i = 0; i < nav.length; i++) {
       nav[i].style.opacity = 0.5;
     }
     nav[1].style.opacity = 1;
-  } else if (current >= contact.offsetTop) {
+  } else {
     for (i = 0; i < nav.length; i++) {
       nav[i].style.opacity = 0.5;
     }
     nav[2].style.opacity = 1;
   }
-
+  
   current === 0
     ? (about.style.backgroundColor = "black")
     : (about.style.backgroundColor = "#F2F2F2");
