@@ -42,12 +42,12 @@ window.addEventListener("scroll", () => {
     ? (about.style.backgroundColor = "black")
     : (about.style.backgroundColor = "#F2F2F2");
 
-  if (current > prevScroll) {
-    header.classList.add("scroll__down");
-    header.style.transition = "0.8s ease-in-out";
-  } else if (current < prevScroll) {
-    header.classList.remove("scroll__down");
-  }
+  // if (current > prevScroll) {
+  //   header.classList.add("scroll__down");
+  //   header.style.transition = "0.8s ease-in-out";
+  // } else if (current < prevScroll) {
+  //   header.classList.remove("scroll__down");
+  // }
   prevScroll = current;
 });
 

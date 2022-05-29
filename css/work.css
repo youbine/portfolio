@@ -116,15 +116,14 @@
   background-image: radial-gradient(
     circle farthest-side at center center,
     #fff 0%,
-    rgba(255, 255, 255, 0.5) 60%,
-    transparent 50%
+    rgba(255, 255, 255, 0.5) 100%,
+    transparent 100%
   );
   background-position: center center;
   background-size: 0% 0%;
   transition: background-size 0.7s cubic-bezier(0.67, 0.01, 0.15, 0.98);
   transition-delay: 1s;
   overflow: hidden;
-  border-radius: 50%;
 }
 
 .showbg {
