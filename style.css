@@ -19,7 +19,7 @@ html::-webkit-scrollbar {
 .mobile {
   display: none;
 }
-/* @media screen and (min-width: 0px) and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
   html {
     height: 100%;
     overflow: hidden;
@@ -45,4 +45,14 @@ html::-webkit-scrollbar {
     font-size: 2rem;
     display: block;
   }
-} */
+  .intro {
+    display: none;
+    position: none;
+  }
+  svg {
+    display: none;
+  }
+  nav {
+    display: none;
+  }
+}
