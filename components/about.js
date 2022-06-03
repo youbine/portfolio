@@ -46,7 +46,6 @@ const introAnimation = () => {
       opacity: 0,
       duration: 1,
     });
-
   return tl;
 };
 

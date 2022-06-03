@@ -16,7 +16,6 @@
   font-size: 35vmax;
   letter-spacing: -3px;
   stroke-width: 14;
-  transform: matrix(1, 0, 0, 1, 10, 0);
 }
 .contact__wrap {
   display: flex;
@@ -151,11 +150,11 @@ small {
   cursor: pointer;
   align-self: start;
 }
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .contact svg {
     max-height: 40rem;
   }
   .contact__wrap {
     max-height: 40rem;
   }
-}
+} */

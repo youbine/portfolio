@@ -1,8 +1,8 @@
-gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".contact",
     start: "-10%",
+    // markers: true,
   },
 });
 tl.from(".contact__skills > p", {

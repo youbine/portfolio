@@ -1,9 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-
 .work {
   width: 100%;
   height: 100vh;
   text-transform: uppercase;
+  display: block;
+}
+.mouse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 50;
+  pointer-events: none;
+  position: fixed;
+  width: 0rem;
+  height: 0rem;
+  border-radius: 50%;
+  background-color: black;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  transition: width, height 0.5s ease;
 }
 .work svg {
   position: absolute;
@@ -19,312 +35,112 @@
   stroke-width: 14;
 }
 .workWrap {
-  margin: 0 auto;
+  display: flex;
+  margin: auto;
   width: 90%;
   height: 100vh;
-  display: flex;
   align-items: center;
 }
 
 .titles {
-  width: max-content;
-  height: 100%;
   position: relative;
-  mix-blend-mode: difference;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
   font-size: 3.5vmax;
-  perspective: 10000px;
 }
+
 .titlewrap {
-  width: 100%;
-  margin-bottom: 1rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  transition: 1s;
-}
-.skills {
+  color: black;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
   width: 100%;
   height: 100%;
-  position: absolute;
-  bottom: -100%;
-  opacity: 0;
-  line-height: 1.2;
-  font-size: 1.2vmax;
-}
-.skills p {
-  color: rgb(0, 255, 255);
-}
-.skillsToggle {
-  opacity: 1;
-  transition: 1s;
-  transition-delay: 1s;
-}
-.titlewrap h2 {
-  color: white;
-  opacity: 0.2;
-  position: absolute;
-  top: -1rem;
-  left: -1rem;
-}
-.title {
-  cursor: pointer;
-}
-.clicked {
-  transform: translate3d(0, 0, 800px);
-  transition: 1s;
-  transition-delay: 1s;
-}
-.flip {
-  transition: 1s;
-  opacity: 0;
-  transform: rotateX(90deg);
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
 }
 .small {
-  opacity: 0.3;
-  line-height: 1.3;
-  font-size: 1vmax;
-}
-.mouse {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.5vmax;
+  margin-bottom: -1%;
   opacity: 0;
-  z-index: 50;
-  pointer-events: none;
-  position: fixed;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background-color: #f2f2f2;
-  color: rgb(255, 0, 0);
-  font-weight: bold;
-  mix-blend-mode: difference;
 }
-
-.work__detail {
-  height: 100%;
-  width: 90%;
-  max-width: 55vw;
-  max-height: 55vw;
-  position: relative;
-  right: -2%;
-  background-repeat: no-repeat;
-  background-image: radial-gradient(
-    circle farthest-side at center center,
-    #fff 0%,
-    rgba(255, 255, 255, 0.5) 100%,
-    transparent 100%
-  );
-  background-position: center center;
-  background-size: 0% 0%;
-  transition: background-size 0.7s cubic-bezier(0.67, 0.01, 0.15, 0.98);
-  transition-delay: 1s;
-  overflow: hidden;
-}
-
-.showbg {
-  background-size: 170% 170%;
-}
-.devices {
-  opacity: 0;
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: 0.5s;
-  transition-delay: 1s;
+.titlewrap > p {
+  font-family: "Bebas Neue", cursive;
   font-size: 2vmax;
-  z-index: 4;
+  margin-top: 2%;
+  transform: matrix(1, 0, 0, 1, -1000, 0);
+  opacity: 0;
 }
-.showDevicesSpan {
-  opacity: 1;
+.title {
+  color: black;
+  font-size: 7vmax;
+  overflow: hidden;
 }
-.devices__items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 3vw;
+
+.skills {
+  opacity: 0;
+  transform: matrix(1, 0, 0, 1, -1000, 0);
+  font-family: "Bebas Neue", cursive;
+  font-size: 2vmax;
+  color: red;
+}
+
+.title div {
+  transform: translateY(100%);
+}
+.work__detail {
   position: relative;
-  margin: auto;
+  width: 50%;
+  height: 70vh;
+  opacity: 0;
+  transform: matrix(1, 0, 0, 1, 0, 500);
+}
+.panel {
+  cursor: pointer;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 1;
   width: 100%;
   height: 100%;
-}
-.devices span {
-  font-size: 1.3vmax;
-  color: rgb(134, 134, 134);
-  position: relative;
-  cursor: pointer;
-}
-.monitor {
-  transform: translateY(200%);
-  transition: 1s;
-  transition-delay: 1s;
-  margin: 0 auto;
-  width: 80%;
-}
-.screen {
-  display: block;
-  background: #000;
-  border-radius: 3%;
-  margin: 0 auto;
-  position: relative;
-  width: 90%;
-  height: 30vw;
-  border: 5px solid #cacacc;
-}
-.viewport {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  margin: 4%;
-  background: #333;
+  background-position: 100% top;
+  background-size: cover;
   background-repeat: no-repeat;
 }
-.link {
-  width: 100%;
+.panel a {
   height: 100%;
-}
-.neck {
-  margin: 0 auto;
-  height: 3rem;
-  width: 5rem;
-  background: black;
-}
-.base {
-  position: relative;
-  margin: 0 auto;
-  width: 50%;
-  height: 1rem;
-  background-color: #000;
-  box-shadow: 0 0.5rem 2em 0.2em rgba(0, 0, 0, 0.33), 0 0 0 0.5px #000 inset;
-  /* background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.5),
-      rgba(71, 71, 71, 0.8) 0.5%,
-      rgba(0, 0, 0, 0.4) 3.3%,
-      transparent 15%,
-      rgba(77, 76, 76, 0.8) 50%,
-      transparent 85%,
-      rgba(0, 0, 0, 0.4) 96.7%,
-      rgba(94, 94, 94, 0.8) 99.5%,
-      rgba(0, 0, 0, 0.5) 100%
-    ); */
-}
-
-.monitor .viewport {
-  transition: background-position 3s ease;
-  background-position: 0 0;
-  background-size: 100% auto;
-  overflow: hidden;
-  cursor: pointer;
-}
-.monitor:hover .viewport {
-  background-position: 0 100%;
-}
-.ipad {
-  transform: translateY(200%);
-  position: absolute;
-  width: 25vw;
-  height: 35vw;
-  display: block;
-  border: 16px solid #111;
-  border-radius: 2rem;
-  box-shadow: 0 0.5em 2em 0.2em rgba(0, 0, 0, 0.33), 0 0 0 0.5px #000 inset;
-  transition: 1s;
-  transition-delay: 1s;
-  overflow: hidden;
-}
-.iphone {
-  transform: translateY(200%);
-  position: absolute;
-  width: 18vw;
-  height: 35vw;
-  display: block;
-  border: 16px solid #111;
-  border-radius: 2rem;
-  box-shadow: 0 0.5em 2em 0.2em rgba(0, 0, 0, 0.33), 0 0 0 0.5px #000 inset;
-  transition: 1s;
-  transition-delay: 1s;
-  overflow: hidden;
-}
-
-.iphone__screen {
-  border-radius: 1rem;
   width: 100%;
-  height: 100%;
-  overflow: scroll;
+}
+.panel.hite {
+  background-image: url("../Webpage-CloneCoding-Hitejinro.png");
+}
+.panel.starbucks {
+  background-image: url("../Webpage-CloneCoding-Starbucks.png");
+}
+.panel.netflix {
+  background-image: url("../React-netflix.png");
+}
+.panel.taco {
+  background-image: url("../Almighty-taco.png");
+  background-position: center center;
+}
+.panel.apple {
+  background-image: url("../Webpage-CloneCoding-Apple.png");
+}
+.panel.room {
+  background-image: url("../RoomHomepage.png");
+  background-position: left center;
 }
 
-.iphone__screen::-webkit-scrollbar {
-  display: none;
-}
-.iphone__img {
-  width: 100%;
-  margin-bottom: -1rem;
-}
-.showDevices {
-  transform: translateY(0%);
-}
-#mobile svg,
-#pad svg {
-  cursor: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-}
-
-#pad svg path:last-child,
-#mobile svg path:last-child {
-  stroke: red;
-  opacity: 0;
-  stroke-width: 13;
-  fill: none;
-  stroke-dasharray: 0;
-}
-.pathLast {
-  animation: line-dash 10s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-}
-
-#pad svg path:first-child,
-#mobile svg path:first-child {
-  stroke: red;
-  stroke-width: 13;
-  fill: none;
-  opacity: 0;
-  stroke-dasharray: 0;
-}
-.pathFirst {
-  animation: line-dash 10s;
-  animation-delay: 1.5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes line-dash {
-  0% {
-    stroke-dasharray: 0 1500;
-    opacity: 1;
-  }
-  15% {
-    stroke-dasharray: 1500 1500;
-    opacity: 1;
-  }
-  100% {
-    stroke-dasharray: 1500 1500;
-    opacity: 1;
-  }
-}
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .work svg {
     max-height: 60rem;
   }
@@ -335,10 +151,7 @@
     height: 100%;
     width: 100%;
   }
-  .neck {
-    height: 1rem;
-  }
   .mouse {
     display: none;
   }
-}
+} */

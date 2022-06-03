@@ -59,7 +59,6 @@
   font-size: 35vmax;
   letter-spacing: -3px;
   stroke-width: 14;
-  transform: matrix(1, 0, 0, 1, 25, 0);
 }
 .aboutWrap {
   display: flex;
@@ -70,6 +69,7 @@
   position: relative;
 }
 .left {
+  color: whitesmoke;
   left: 0;
   position: absolute;
   display: flex;
@@ -205,11 +205,11 @@
     opacity: 1;
   }
 }
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .aboutWrap {
     max-height: 40rem;
   }
   .about svg {
     max-height: 50rem;
   }
-}
+} */

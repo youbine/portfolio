@@ -13,273 +13,273 @@
       http-equiv="Content-Security-Policy"
       content="upgrade-insecure-requests"
     />
-
+    <script src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
+    <script src="https://unpkg.com/smooth-scrollbar@latest/dist/plugins/overscroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="favicon.ico" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
     <title>YoubinPortfolio</title>
   </head>
 
   <body>
-    <nav>
-      <div class="nav__wrap">
-        <div class="home">
-          <div class="homebg"></div>
-          <a href="https://youbine.github.io/youbinportfolio/"
-            >youbin<br />portfolio</a
-          >
+    <div class="scroller">
+      <nav>
+        <div class="nav__wrap">
+          <div class="home">
+            <a href="https://youbine.github.io/youbinportfolio/"
+              >youbin<br />portfolio</a
+            >
+          </div>
+          <div class="menu">
+            <ul>
+              <li><a href="#about">about</a></li>
+              <li><a href="#work">work</a></li>
+              <li><a href="#contact">contact</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="menu">
-          <ul>
-            <li>about</li>
-            <li>work</li>
-            <li>contact</li>
-          </ul>
+      </nav>
+      <section class="about" id="about">
+        <div class="intro">
+          <p class="intro__title hidden">
+            youbin <br />
+            portpolio
+          </p>
+          <div class="intro__background intro__background__left"></div>
+          <div class="intro__background intro__background__right"></div>
         </div>
-      </div>
-    </nav>
+        <svg>
+          <text x="0" y="100%">about</text>
+        </svg>
+        <span class="mobile"
+          >no mobile & tablet device support... <br />
+          i will edit in the near future<br />
+          thank you for your visit</span
+        >
+        <div class="aboutWrap">
+          <div class="left">
+            <div class="name">
+              <span>I'm</span>
+              <span class="name__text"
+                >Youbin,
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 152.9 43.4"
+                  style="enable-background: new 0 0 152.9 43.4"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div class="develop">
+              <div class="text">
+                <p>web publisher</p>
+                <div class="greeting">
+                  <span>안녕하세요</span>
+                  <span>Hola</span>
+                  <span>Hello</span>
+                  <span>Aloha</span>
+                  <span>Ni hao</span>
+                  <span>Bonjour</span>
+                </div>
+                <p>&emsp;&emsp;&emsp; front-end</p>
+                <p>junior developer</p>
+                <p>thank you for</p>
+                <p>visiting my</p>
+                <p>portfolio</p>
+              </div>
+            </div>
+          </div>
 
-    <section class="about">
-      <section class="intro">
-        <p class="intro__title hidden">
-          youbin <br />
-          portpolio
-        </p>
-        <div class="intro__background intro__background__left"></div>
-        <div class="intro__background intro__background__right"></div>
+          <div class="right">
+            <div class="today">
+              <p>i live</p>
+              <p>in korea</p>
+              <span class="weeks"></span>
+              <span class="clock"></span>
+              <div class="doing__wrap">
+                <span class="doing"></span>
+              </div>
+            </div>
+
+            <div class="love__wrap">
+              <span>i love&nbsp;</span> <span class="typing__love"></span
+              ><span class="cursor">&nbsp;</span>
+            </div>
+
+            <div class="iam__wrap">
+              <span>i'm&nbsp;</span>
+              <span class="typing__iam"></span
+              ><span class="cursor">&nbsp;</span>
+            </div>
+          </div>
+        </div>
       </section>
-      <svg>
-        <text x="30%" y="80%">about</text>
-      </svg>
-      <span class="mobile"
-        >no mobile device support... <br />
-        i will edit in the near future<br />
-        thank you for your visit</span
-      >
-      <div class="aboutWrap">
-        <div class="left">
-          <div class="name">
-            <span>I'm</span>
-            <span class="name__text"
-              >Youbin,
-              <svg
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 152.9 43.4"
-                style="enable-background: new 0 0 152.9 43.4"
-                xml:space="preserve"
+
+      <section class="work" id="work">
+        <svg>
+          <text x="0" y="30%">WORK</text>
+        </svg>
+        <div class="workWrap">
+          <div class="mouse"></div>
+          <div class="titles">
+            <div class="titlewrap">
+              <span class="small">web</span>
+              <h2 class="title"><div>hite</div></h2>
+              <p>web site clone coding</p>
+              <div class="skills">
+                <p>
+                  html <br />
+                  css <br />javascript
+                </p>
+              </div>
+            </div>
+            <div class="titlewrap">
+              <span class="small">web & tablet & mobile</span>
+              <h2 class="title"><div>starbucks</div></h2>
+              <p>web site clone coding</p>
+              <div class="skills">
+                <p>
+                  html <br />
+                  css <br />javascript
+                </p>
+              </div>
+            </div>
+            <div class="titlewrap">
+              <span class="small">web</span>
+              <h2 class="title"><div>netflix</div></h2>
+              <p>web site clone coding</p>
+              <div class="skills">
+                <p>
+                  reactJs <br />
+                  styled-components
+                </p>
+              </div>
+            </div>
+            <div class="titlewrap">
+              <span class="small">web</span>
+              <h2 class="title"><div>Almighty Taco</div></h2>
+              <p>
+                platform for ordering foods <br />
+                design, development
+              </p>
+              <div class="skills">
+                <p>
+                  reactJs <br />
+                  styled-components <br />react-select
+                </p>
+              </div>
+            </div>
+            <div class="titlewrap">
+              <span class="small">web</span>
+              <h2 class="title"><div>Scroll animation</div></h2>
+              <p>web site clone coding</p>
+              <div class="skills">
+                <p>
+                  html <br />
+                  css <br />javascript <br />scroll magic
+                </p>
+              </div>
+            </div>
+            <div class="titlewrap room">
+              <span class="small">web & tablet & mobile</span>
+              <h2 class="title"><div>Room</div></h2>
+              <p>development</p>
+              <div class="skills">
+                <p>
+                  html <br />
+                  css <br />javascript
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="work__detail">
+            <a
+              href="https://youbine.github.io/Webpage_CloneCoding/Hitejinro/index.html"
+              target="_blank"
+              ><div class="panel hite"></div
+            ></a>
+
+            <a
+              href="https://youbine.github.io/Webpage_CloneCoding/Starbucks/index.html"
+              target="_blank"
+            >
+              <div class="panel starbucks"></div
+            ></a>
+            <a href="https://youbine.github.io/react_netflix/" target="_blank">
+              <div class="panel netflix"></div
+            ></a>
+
+            <a href="https://youbine.github.io/almightyTaco/" target="_blank">
+              <div class="panel taco"></div
+            ></a>
+            <a
+              href="https://youbine.github.io/Webpage_CloneCoding/Apple/index.html"
+              target="_blank"
+            >
+              <div class="panel apple"></div
+            ></a>
+            <a
+              href="https://youbine.github.io/Webpage_CloneCoding/RoomHomepage/index.html"
+              target="_blank"
+            >
+              <div class="panel room"></div
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <svg>
+          <text x="0" y="30%">contact</text>
+        </svg>
+        <div class="contact__wrap">
+          <div class="contact__skills">
+            <p>skills</p>
+            <ul class="skills__list">
+              <li>
+                css<span>90<small>%</small></span>
+              </li>
+              <li>
+                html<span>100<small>%</small></span>
+              </li>
+              <li>
+                javascript<span>80<small>%</small></span>
+              </li>
+              <li>
+                reactJS<span>60<small>%</small></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact__email">
+            <h2>
+              if <br />you are<br />
+              interested, please <br /><strong>Contact Me</strong>
+            </h2>
+            <div class="email">
+              <a
+                href="mailto:youbbiinn@gmail.com&subject=hi&body=say something"
               >
-                <path
-                  d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"
-                />
-              </svg>
-            </span>
-          </div>
-          <div class="develop">
-            <div class="text">
-              <p>web publisher</p>
-              <div class="greeting">
-                <span>안녕하세요</span>
-                <span>Hola</span>
-                <span>Hello</span>
-                <span>Aloha</span>
-                <span>Ni hao</span>
-                <span>Bonjour</span>
-              </div>
-              <p>&emsp;&emsp;&emsp; front-end</p>
-              <p>junior developer</p>
-              <p>thank you for</p>
-              <p>visiting my</p>
-              <p>portfolio</p>
+                Get in touch
+              </a>
             </div>
+            <div class="gmail">youbbiinn@gmail.com</div>
           </div>
         </div>
-
-        <div class="right">
-          <div class="today">
-            <p>i live</p>
-            <p>in korea</p>
-            <span class="weeks"></span>
-            <span class="clock"></span>
-            <div class="doing__wrap">
-              <span class="doing"></span>
-            </div>
-          </div>
-
-          <div class="love__wrap">
-            <span>i love&nbsp;</span> <span class="typing__love"></span
-            ><span class="cursor">&nbsp;</span>
-          </div>
-
-          <div class="iam__wrap">
-            <span>i'm&nbsp;</span>
-            <span class="typing__iam"></span><span class="cursor">&nbsp;</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="work">
-      <svg>
-        <text x="0" y="90%">WORK</text>
-      </svg>
-      <div class="workWrap">
-        <div class="mouse"></div>
-        <div class="titles">
-          <div class="titlewrap">
-            <h2>1</h2>
-            <span class="title hite">hite</span>
-            <span class="small">web</span>
-            <div class="skills">
-              <p>html</p>
-              <p>css</p>
-              <p>javascript</p>
-            </div>
-          </div>
-          <div class="titlewrap">
-            <h2>2</h2>
-            <span class="title starbucks">starbucks</span>
-            <span class="small">web & pad & mobile</span>
-            <div class="skills">
-              <p>html</p>
-              <p>css</p>
-              <p>javascript</p>
-            </div>
-          </div>
-          <div class="titlewrap">
-            <h2>3</h2>
-            <span class="title netflix">netflix</span>
-            <span class="small">web</span>
-            <div class="skills">
-              <p>reactJs</p>
-              <p>styled-components</p>
-            </div>
-          </div>
-          <div class="titlewrap">
-            <h2>4</h2>
-            <span class="title taco">Almighty Taco</span>
-            <span class="small">web</span>
-            <div class="skills">
-              <p>order template</p>
-              <p>reactJs</p>
-              <p>styled-components</p>
-            </div>
-          </div>
-          <div class="titlewrap">
-            <h2>5</h2>
-            <span class="title apple">Scroll animation</span>
-            <span class="small">web</span>
-            <div class="skills">
-              <p>html</p>
-              <p>css</p>
-              <p>javascript</p>
-              <p>scroll magic</p>
-            </div>
-          </div>
-        </div>
-        <div class="work__detail">
-          <div class="devices">
-            <span id="web">web,</span>
-            <span id="pad"
-              >pad,
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 600 150"
-                preserveAspectRatio="none"
-              >
-                <path d="M450.4,23.9C401.6,40,100.9,80.6,4,130.4"></path>
-                <path
-                  d="M15.1,27.6c100.5,20.3,200.8,74,467.3,111.7"
-                ></path></svg
-            ></span>
-            <span id="mobile"
-              >mobile
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 450 150"
-                preserveAspectRatio="none"
-              >
-                <path d="M450.4,23.9C401.6,40,100.9,80.6,4,130.4"></path>
-                <path
-                  d="M15.1,27.6c100.5,20.3,200.8,74,467.3,111.7"
-                ></path></svg
-            ></span>
-          </div>
-          <div class="devices__items">
-            <div class="monitor">
-              <div class="screen">
-                <a class="link" href="" target="_blank">
-                  <div class="viewport"></div
-                ></a>
-              </div>
-              <div class="neck"></div>
-              <div class="base"></div>
-            </div>
-            <div class="ipad">
-              <div class="iphone__screen">
-                <img
-                  class="iphone__img"
-                  src="./Webpage-CloneCoding-Starbucks_pad.png"
-                />
-              </div>
-            </div>
-            <div class="iphone">
-              <div class="iphone__screen">
-                <img
-                  class="iphone__img"
-                  src="./Webpage-CloneCoding-Starbucks_mobile.png"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact">
-      <svg>
-        <text x="7%" y="80%">contact</text>
-      </svg>
-      <div class="contact__wrap">
-        <div class="contact__skills">
-          <p>skills</p>
-          <ul class="skills__list">
-            <li>
-              css<span>90<small>%</small></span>
-            </li>
-            <li>
-              html<span>100<small>%</small></span>
-            </li>
-            <li>
-              javascript<span>80<small>%</small></span>
-            </li>
-            <li>
-              reactJS<span>60<small>%</small></span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="contact__email">
-          <h2>
-            if <br />you are<br />
-            interested, please <br /><strong>Contact Me</strong>
-          </h2>
-          <div class="email">
-            <a href="mailto:youbbiinn@gmail.com&subject=hi&body=say something">
-              Get in touch
-            </a>
-          </div>
-          <div class="gmail">youbbiinn@gmail.com</div>
-        </div>
-      </div>
-    </section>
-
+      </section>
+    </div>
     <script src="components/about.js"></script>
     <script src="components/work.js"></script>
     <script src="components/scroll.js"></script>
