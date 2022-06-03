@@ -31,7 +31,7 @@
   cursor: default;
   height: 70%;
   width: 30%;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 .contact__skills p {
   margin-left: -5%;
@@ -95,6 +95,7 @@ small {
   font-size: 1vmax;
 }
 .contact__email {
+  margin-top: 5%;
   display: grid;
   place-items: end;
 }

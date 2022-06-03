@@ -139,6 +139,10 @@
   background-image: url("../RoomHomepage.png");
   background-position: left center;
 }
+.panel:hover {
+  background-position: 100% bottom;
+  transition: 5s;
+}
 
 /* @media screen and (max-width: 1024px) {
   .work svg {
