@@ -114,6 +114,7 @@
   background-position: 100% top;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: background-position 5s;
 }
 .panel a {
   height: 100%;
@@ -141,7 +142,6 @@
 }
 .panel:hover {
   background-position: 100% bottom;
-  transition: 5s;
 }
 
 /* @media screen and (max-width: 1024px) {
