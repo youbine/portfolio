@@ -6,10 +6,6 @@
   overflow: hidden;
   text-transform: uppercase;
 }
-.hidden {
-  visibility: hidden;
-  opacity: 0;
-}
 .intro {
   position: fixed;
   background-color: #f2f2f2;
@@ -20,33 +16,18 @@
   z-index: 5;
 }
 .intro__title {
+  height: fit-content;
+  overflow: hidden;
   letter-spacing: 10px;
   color: rgb(255, 57, 57);
   font-size: 7vmax;
   width: 80%;
   text-align: center;
   z-index: 2;
-  transform: translateY(60px);
 }
-
-.intro__background {
-  position: absolute;
-  top: 0;
-  background-color: black;
-  width: 50%;
-  height: 100%;
-  transform: scaleX(0);
+.intro__title p {
+  transform: translateY(100%);
 }
-.intro__background__left {
-  left: 0;
-  transform-origin: left center;
-}
-
-.intro__background__right {
-  left: 50%;
-  transform-origin: right center;
-}
-
 .about svg {
   position: absolute;
   width: 100%;
@@ -62,62 +43,58 @@
 }
 .aboutWrap {
   display: flex;
-  margin: 15vh auto auto auto;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10vh auto auto auto;
   width: 90%;
   overflow: hidden;
   height: 80vmin;
   position: relative;
-}
-.left {
   color: whitesmoke;
-  left: 0;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
-.greeting {
-  position: relative;
-  font-size: 2vmax;
-}
-.greeting span {
-  padding: 3% 3%;
-  mix-blend-mode: difference;
-  position: absolute;
-  display: block;
-  letter-spacing: 0.2rem;
-}
-.develop {
-  mix-blend-mode: difference;
-  position: relative;
 }
 .text {
   mix-blend-mode: difference;
+  font-size: 1.5vmax;
   position: absolute;
-  top: 0;
-  font-size: 4.5vmax;
+  right: 0;
+  top: 25%;
+  text-align: right;
 }
-.text p {
-  opacity: 0;
+.develop {
+  height: fit-content;
+  overflow: hidden;
+  width: 100%;
+  mix-blend-mode: difference;
+  position: relative;
+  top: 0;
+  font-size: 3vmax;
+  line-height: 1.2;
+}
+.develop div {
+  height: fit-content;
+  overflow: hidden;
+}
+.develop h1 {
+  margin-top: -2%;
+  font-size: 10vmax;
 }
 .name {
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
   mix-blend-mode: difference;
-  left: 9vw;
-  font-size: 4.5vmax;
-  animation: fadeIn 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation-delay: 6s;
-  z-index: 5;
+  font-size: 10vmax;
+  /* animation: fadeIn 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 6s; */
 }
 .name__text {
-  padding-top: 2rem;
   display: inline-block;
   position: relative;
-  font-size: 4.5vmax;
+  font-size: 10vmax;
   letter-spacing: 0.3rem;
 }
 .name__text svg {
+  display: none;
   fill: none;
   stroke: red;
   stroke-width: 3;
@@ -126,7 +103,7 @@
   stroke-dashoffset: 338;
   stroke-linecap: round;
   position: absolute;
-  top: 65%;
+  top: 50%;
   left: 50%;
   width: calc(95% + 50px);
   opacity: 0;
@@ -140,23 +117,6 @@
   transition: opacity 0s,
     stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.right {
-  mix-blend-mode: difference;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  position: absolute;
-  top: -8vh;
-  width: 100%;
-  height: 100%;
-  text-align: right;
-  font-size: 2vmax;
-  color: #f2f2f2;
-}
-.doing__wrap {
-  font-size: 2vmax;
-}
-
 .love__wrap span,
 .iam__wrap span {
   display: inline-block;

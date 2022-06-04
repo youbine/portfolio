@@ -1,46 +1,33 @@
 const greeting = document.querySelectorAll(".greeting > span");
 const texts = document.querySelectorAll(".text > p");
-
-const animationOptions = {
-  ease: "expo.inOut",
-};
-
 const introAnimation = () => {
   const tl = gsap.timeline({
     defaults: {
-      ease: animationOptions.ease,
       duration: 1,
     },
   });
 
-  tl.to(".intro__title", {
-    duration: 1.5,
+  tl.to(".intro__title > p", {
+    duration: 2,
     y: 0,
-    autoAlpha: 1,
-    delay: 0.5,
+    ease: "power4",
   })
-    .to(".intro__background__left, .intro__background__right", {
-      scaleX: 1,
-    })
-    .to(".intro__background__left, .intro__background__right", {
-      scaleY: 0,
-      transformOrigin: "top center",
-    })
     .to(
-      ".intro__title",
+      ".intro__title > p",
       {
-        duration: 1.5,
-        y: -60,
-        autoAlpha: 0,
+        duration: 1,
+        y: "-100%",
+        ease: "power4",
       },
-      "-=0.6"
+      "-=0.5"
     )
     .to(
       ".intro",
       {
         y: "-100%",
+        ease: Expo.easeInOut,
       },
-      "-=0.5"
+      "-=0.3"
     )
     .from(".about > svg", {
       opacity: 0,
@@ -51,10 +38,9 @@ const introAnimation = () => {
 
 const skewInElements = (elements) => {
   const tl = gsap.timeline();
-
   tl.from(elements, {
     duration: 1,
-    ease: animationOptions.ease,
+    ease: "power4",
     skewY: -5,
     autoAlpha: 0,
     y: 40,
@@ -63,15 +49,27 @@ const skewInElements = (elements) => {
   return tl;
 };
 
-const fadeInElements = (elements) => {
+const fromYElements = (elements) => {
   const tl = gsap.timeline();
-
   tl.from(elements, {
-    duration: 1,
-    ease: animationOptions.ease,
-    y: "20px",
+    y: "100%",
+    duration: 1.5,
+    ease: "power4",
   });
-
+  return tl;
+};
+const overflowEl = (el) => {
+  const tl = gsap.timeline();
+  tl.to(el, {
+    overflow: "visible",
+  });
+  return tl;
+};
+const svgWork = (el) => {
+  const tl = gsap.timeline();
+  tl.to(el, {
+    display: "block",
+  });
   return tl;
 };
 
@@ -80,62 +78,15 @@ const master = gsap.timeline({
   delay: 0.2,
 });
 
-const tlgreeting = new TimelineLite({
-  onComplete: function () {
-    tlgreeting.restart();
-  },
-});
-tlgreeting.delay(6);
-TweenLite.defaultEase = Circ.easeInOut;
-const time = 1;
-const y = 50;
-tlgreeting
-  .add(
-    TweenMax.staggerFromTo(
-      greeting,
-      time,
-      {
-        opacity: 0,
-        y: y,
-      },
-      {
-        opacity: 1,
-        y: 0,
-      },
-      2
-    )
-  )
-  .add(
-    TweenMax.staggerTo(
-      greeting,
-      time,
-      {
-        delay: time,
-        autoAlpha: 0,
-        y: -y,
-      },
-      2
-    ),
-    1.3
-  );
-
 master
   .add(introAnimation())
-  .add(fadeInElements(".greeting"))
-  .add(
-    skewInElements(".today, .love__wrap, .iam__wrap, .home, .menu"),
-    "+=0.5"
-  );
-
-texts.forEach((text, i) => {
-  setTimeout(function () {
-    ((text.style.opacity = 1),
-    (text.style.animation =
-      "fadeIn 1s cubic-bezier(0.39, 0.575, 0.565, 1) both")),
-      (text.style.animationDelay = `${0.2 * i}s`);
-  }, 6500);
-});
-
+  .add(fromYElements(".im, .name__text"))
+  .add(overflowEl(".name"), "-=1")
+  .add(svgWork(".name__text > svg"), "-=1")
+  .add(fromYElements(".develop > div:first-child > p"), "-=1.5")
+  .add(fromYElements(".develop > div:nth-child(2) > p"), "-=1.3")
+  .add(fromYElements(".develop> h1"), "-=1")
+  .add(skewInElements(".today, .love__wrap, .iam__wrap, .home, .menu"), "+=0");
 const clock = document.querySelector(".clock");
 const weeks = document.querySelector(".weeks");
 const doing = document.querySelector(".doing");
