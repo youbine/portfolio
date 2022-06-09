@@ -87,6 +87,9 @@ master
   .add(fromYElements(".develop > div:nth-child(2) > p"), "-=1.3")
   .add(fromYElements(".develop> h1"), "-=1")
   .add(skewInElements(".today, .love__wrap, .iam__wrap, .home, .menu"), "+=0");
+
+
+  
 const clock = document.querySelector(".clock");
 const weeks = document.querySelector(".weeks");
 const doing = document.querySelector(".doing");
